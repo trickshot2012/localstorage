@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+    function fnSaveData(){    
+        window.localStorage.setItem("CustName",document.getElementById("txtCustomer").value);    
+        window.localStorage.setItem("CustAddr",document.getElementById("txtCustAddr").value);    
+        
+    }  
+function fnGetData ()   {    
+    alert(window.localStorage.getItem("CustName"));    
+    alert(window.localStorage.getItem("CustAddr"));    
+}  
+</script>
+<div>    
+   <table>    
+      <tr>    
+         <td>Customer Name </td>    
+         <td><input type="text" name="txtCustomer" id="txtCustomer"/></td>    
+      </tr>    
+      <tr>    
+         <td>Customer Address </td>    
+         <td><input type="text" name="txtCustAddr" id="txtCustAddr"/></td>    
+      </tr>    
+      <tr>    
+         <td><input type="button" id="btnSave"  value="Save to Local Storage" onClick="fnSaveData()" /> </td>    
+         <td><input type="button" id="btnFind" value="Get Data From Local Storage" onClick="fnGetData()" /> </td>    
+      </tr>    
+   </table>    
+</div>  
